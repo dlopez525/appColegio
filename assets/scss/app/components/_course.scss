@@ -1,0 +1,162 @@
+.sub-header {
+    @include edContainer;
+    @include full;
+
+    background: #F3F3F3F3;
+    box-shadow: 0 3px 6px rgba(#000, .16);
+    position: relative;
+    height: 110px;
+
+    .avatar {
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        background: red;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    .data {
+        width: 100%;
+        text-align: center;
+        margin-top: 3em;
+    }
+}
+
+.main {
+    @include edContainer;
+    margin-top: 1.5em;
+    margin-bottom: 60px;
+}
+
+.tasks {
+    @include edItem(100,100,100);
+
+    .task {
+        @include card();
+
+        margin-bottom: $gutter;
+        cursor: pointer;
+        display: block;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &-title {
+            @include edContainer;
+            @include crossCenter;
+
+            .title-task {
+                @include edItem(70,70,70);
+                padding: 0;
+            }
+
+            h6 {
+                margin: 0;
+            }
+
+            .date-task {
+                @include edItem(30,30,30);
+                padding: 0;
+                padding-left: $gutter;
+            }
+
+            p {
+                margin: 0;
+                line-height: auto;
+                color: $gray-material;
+            }
+        }
+
+        &-description {
+            @include edContainer;
+            
+            margin-top: 16px;
+        }
+
+        &-attach {
+            @include edItem(25,25,25);
+
+            i {
+                display: block;
+            }
+        }
+
+        &-verify {
+            @include edItem(20,20,20);
+            @include mainEnd;
+            @include crossCenter;
+
+            .action {
+                background: red;
+                width: 33px;
+                height: 33px;
+                border-radius: 50%;
+                color: #fff;
+                text-align: center;
+                line-height: 33px;
+                border: none;
+                padding: 0;
+
+                i {
+                    line-height: 33px;
+                }
+
+                &.done {
+                    background: #0AB231;
+                }
+            }
+        }
+
+        &-text {
+            @include edItem(80,80,80);
+            padding: 0;
+            font-size: 14px;
+            color: $gray-material;
+
+            p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.add {
+    position: relative;
+    width: 100%;
+    height: 45px;
+
+    .bubble {
+        background: #8b1313;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        right: $gutter;
+        top: -25%;
+        box-shadow: 0 5px 25px rgba(#000, .4); 
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    i {
+        color: #fff;
+        line-height: 45px;
+    }
+}

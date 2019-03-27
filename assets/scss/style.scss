@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+// Variables
+$bg: #F9F9FA;
+$blue: #2C3E50;
+$blue-alt: #518AFF;
+$green: #42B983;
+$gray: #8A8A8A;
+$gray-alt: #515C6F;
+$gray-material: #757575;
+$bg-header: linear-gradient(
+    272deg,
+    #1A5275,
+    #112C4B
+);
+
+// Variables Font Weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+@import 'ed-grid/ed-grid';
+@import 'app/app';

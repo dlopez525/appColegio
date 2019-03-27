@@ -1,0 +1,14 @@
+body {
+    background: $bg;
+}
+
+@import 'components/modulos/inputMaterial';
+@import 'components/modulos/cardMaterial';
+@import 'components/modulos/navmenu';
+@import 'components/modulos/headerImage';
+@import 'components/login';
+@import 'components/home';
+@import 'components/courses';
+@import 'components/course';
+@import 'components/task';
+@import 'components/create';

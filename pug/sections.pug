@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="css/style.css")
+        title Inicio
+    body
+        header.main-header
+            .title
+                .icon-back
+                    a(href="#")
+                        i.material-icons keyboard_backspace
+                .title-left
+                    h6 Mis Secciones
+
+        .cards       
+            - for(var i = 0; i < 4; i++) 
+                a.card(href="#")
+                    .card-body
+                        .card-img
+                            .icon-cir
+                                i.material-icons group_work
+                        .card-info
+                            .card-title
+                                h6 Segundo de Secundaria
+            
+        include includes/navmenu.pug

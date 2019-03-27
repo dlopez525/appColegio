@@ -1,0 +1,158 @@
+.body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.toplogin {
+    background: url('../img/tops.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: -20px;
+}
+
+.bottom {
+    background: url('../img/bottom.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    left: -7%;
+    bottom: 20%;
+}
+
+.title {
+    @include edContainer;
+
+    &__text {
+        @include edItem(100,100,100);
+
+        text-align: center;
+        margin-top: 2em;
+        
+        h5 {
+            color: #fff;
+            margin: 0;
+        }
+    }
+}
+
+.logo {
+    margin-top: 3em;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0%;
+    z-index: 99;
+
+    h1 {
+        color: #537BFA;
+        font-family: 'Baloo Chettan', cursive;
+        font-size: 80px;
+
+        span {
+            animation: move 3s ease-in-out infinite;
+        }
+        
+        span:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        span:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        span:nth-child(4) {
+            animation-delay: 1.3s;
+        }
+
+        span.y {
+            color: #fff;
+            animation: move 4s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes move {
+    0% { transform: translate(-25%, 0);}
+    50% { text-shadow: 0 15px 40px rgba(black, 0.8); }
+    100% { transform: translate(33%, 0); }
+  }
+  
+
+.form-login {
+    @include edContainer;
+    @include mainCenter;
+
+    position: relative;
+    bottom: 0em;
+    z-index: 99;
+    
+    &__form {
+        @include edItem(90,75,80);
+        
+        padding-top: $gutter * 2;
+        padding-left: 0;
+        padding-right: 0;
+        background: #fff;
+        box-shadow: 0 24px 38px rgba(#000, .40);
+
+        .placeholder {
+            text-transform: uppercase;
+        }
+
+        .form-input {
+            padding-left: $gutter * 2;
+            padding-right: $gutter * 2;
+        }
+
+        .form-input:nth-child(1) {
+            margin-bottom: 2em;
+        }
+
+        .forgot {
+            @include mainEnd;
+            margin-top: 5px;
+            margin-bottom: $gutter;
+            padding-left: $gutter * 3;
+            padding-right: $gutter * 3;
+
+            a {
+                color: $gray-alt;
+                font-weight: $medium;
+                font-size: 12px;
+            }
+        }
+        .btn-input {
+            margin-top: 2em;
+        }
+
+        .btn-login {
+            margin-top: 2em;
+            display: block;
+            width: 100%;
+            height: 3.5em;
+            border: none;
+            background: linear-gradient(
+                272deg,
+                #1A5275,
+                #112C4B
+            );
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                background: #112C4B;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.header-image {
+    @include edContainer;
+    @include full;
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(#8B1313, .69);
+    }
+
+    .top {
+        @include edItem(100,100,100);
+        @include edContainer;
+        height: 56px;
+        position: relative;
+        padding: 0;
+        
+        .icon-back {
+            width: 50px;
+            padding-left: $gutter;
+            
+            a{
+                color: #fff;
+                text-align: left;
+                display: block;
+                
+                &:hover {
+                    text-decoration: none;
+                }
+                
+                i {
+                    line-height: 56px;
+                }
+            }
+        }
+    }
+
+    .header {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        height: 135px;
+        margin-top: 1em;
+    }
+}

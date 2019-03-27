@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="css/style.css")
+    body
+        header.header-image(style="background-image: url(img/course.jpg)")
+            .top
+                .icon-back
+                    a(href="#")
+                        i.material-icons keyboard_backspace
+            .header
+                h6 Trigonometría
+        .sub-header
+            .avatar
+                img(src="img/iconmath.png", alt="")
+            .data
+                p Prof. Gerson Vilca
+            .add
+                a.bubble(href="create.html")
+                    i.material-icons add
+
+        .main
+            .tasks
+                a.task(href="task.html")
+                    .task-title
+                        .title-task
+                            h6 Tarea Trigonometría
+                        .date-task
+                            p 26/03/2019
+                    .task-description
+                        //- .task-attach
+                        //-     i.material-icons file_copy
+                        .task-text
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum, omnis adipisci veniam quia delectus mollitia quidem. Aperiam nostrum iusto.
+                        .task-verify
+                            .action.done
+                                i.material-icons done
+                
+                a.task(href="task.html")
+                    .task-title
+                        .title-task
+                            h6 Tarea Trigonometría
+                        .date-task
+                            p 26/03/2019
+                    .task-description
+                        //- .task-attach
+                        //-     i.material-icons file_copy
+                        .task-text
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum, omnis adipisci veniam quia delectus mollitia quidem. Aperiam nostrum iusto.
+                        .task-verify
+                            .action
+                                i.material-icons clear
+
+    include includes/navmenu.pug

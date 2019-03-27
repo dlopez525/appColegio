@@ -1,0 +1,86 @@
+.form-input {
+    // margin: 35px 0;
+    width: 100%;
+
+    label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 45px;
+        color: $gray;
+    }
+
+    .placeholder {
+        position: absolute;
+        display: block;
+        top: 23px;
+        z-index: 9;
+        font-size: 14px;
+        transition: all 200ms ease-in-out;
+        width: 100%;
+        cursor: text;
+    }
+
+    .input-material,
+    .textarea-material {
+        background: none;
+        position: absolute;
+        top: 15px;
+        z-index: 2;
+        width: 100%;
+        font-size: 16px;
+        border: none;
+        border-bottom: 1px solid $gray;
+        transition: border-color 200ms ease-in-out;
+        outline: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .textarea-material {
+        min-height: 100px;
+        padding: 8px 0;
+    }
+
+    .input-material {
+        height: 30px;
+    }
+
+    .input-material:focus,
+    .input-material:valid,
+    .textarea-material:focus,
+    .textarea-material:valid {
+        & + .placeholder {
+            top: 0;
+            cursor: inherit;
+            font-size: 14px;
+            color: $blue-alt;
+            letter-spacing: 2;
+        }
+
+        border-bottom: 1px solid $blue-alt;
+    }
+}
+
+@mixin btnMaterial($color) {
+    display: block;
+    position: relative;
+    background: $color;
+    border: none;
+    line-height: 2.5em;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 2px rgba(#000, .24);
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: $medium;   
+    padding-left: $gutter;
+    padding-right: $gutter;
+    text-transform: uppercase;
+    letter-spacing: 1.25;
+    
+    &:hover {
+        background: darken($color, 7%);
+        transition: all 200ms ease-in-out; 
+    }
+}

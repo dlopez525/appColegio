@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="css/style.css")
+        title Crear Tarea
+    body
+        header.main-header
+            .title
+                .icon-back
+                    a(href="#")
+                        i.material-icons keyboard_backspace
+                .title-left
+                    h6 Crear Tarea
+
+        .create
+            .create-card
+                form.form-create-task(action="")
+                    .form-group
+                        label Título de la tarea
+                        input(type="text", required)
+                        span.bubble-input
+                            i.material-icons title
+                    .form-group
+                        label Descripcion de Tarea
+                        textarea(name="s", cols="30", rows="10",required)
+                        span.bubble-input
+                            i.material-icons.md-16 notes
+
+                    .btn-create
+                        button.create-task Crear Tarea
+
+        include includes/navmenu.pug

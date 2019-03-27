@@ -1,0 +1,130 @@
+.main-header.bg-red {
+    background: linear-gradient(
+        to left,
+        #8B1313,
+        lighten(#8B1313, 10%)
+    );
+}
+
+.taskss {
+    @include edContainer();
+    position: relative;
+    top: -60px;
+}
+
+.tasks-cont{
+    @include edItem(100,100,100);
+}
+
+.tasks-body {
+    @include card();
+
+    &:hover {
+        background: #fff;
+    }
+}
+
+.tasks-title {
+    margin-bottom: 1em;
+
+    h6 {
+        margin: 0;
+        color: #FD7E77;
+        font-size: 18px;
+    }
+}
+
+.tasks-text {
+    color: $gray-alt;
+    display: block;
+    margin-bottom: 2em;
+}
+
+.tasks-verify {
+    width: 100%;
+    margin-bottom: 1em;
+
+    button {
+        border: none;
+        line-height: 3;
+        padding-left: $gutter * 3;
+        padding-right: $gutter * 3;
+        border-radius: 50px;
+        background: #8B1313;
+        color: #fff;
+        font-size: 1em;
+        display: block;
+        margin: 1em auto;
+        cursor: pointer;
+        transition: .3 all;
+
+        &:hover {
+            background: darken(#8b1313, 5%);
+        }
+    }
+}
+
+.students {
+    @include edContainer;
+    margin-bottom: 4em;
+}
+
+.student {
+    @include edItem(100,100,100);
+    // margin-top: 1em;
+    margin-bottom: $gutter;
+}
+
+.student-card {
+    @include card();
+    @include edContainer;
+}
+
+.student-img {
+    @include edItem(20,20,20);
+    @include flexCenter;
+    padding: 0;
+
+    .img-bubble {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        line-height: 45px;
+        background: linear-gradient(
+            to left,
+            #8B1313,
+            lighten(#8B1313, 10%)
+        );
+        color: #fff;
+
+        i {
+            line-height: 45px;
+        }
+    }
+}
+
+.student-name {
+    @include edItem(65,65,65);
+}
+
+.student-verify {
+    @include edItem(15,15,15);
+    @include flexCenter;
+    padding: 0;
+
+    .action {
+        background: red;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        color: #fff;
+
+        i {
+            line-height: 35px;
+        }
+
+        &.done {
+            background: green;
+        }
+    }
+}

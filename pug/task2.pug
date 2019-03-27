@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="css/style.css")
+        title Inicio
+    body
+        header.main-header.bg-red
+            .title
+                .icon-back
+                    a(href="#")
+                        i.material-icons keyboard_backspace
+                .title-left
+                    h6 Tarea Trigonometría
+
+        .students
+            - for(var i = 0; i < 10; i++)
+                .student
+                    .student-card
+                        .student-img
+                            .img-bubble
+                                i.material-icons person
+                        .student-name
+                            p Esteban Delgado
+                        .student-verify
+                            .action
+                                i.material-icons clear
+
+        include includes/navmenu.pug
