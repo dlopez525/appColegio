@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="css/style.css")
+        title Inicio
+    body
+        header.main-header
+            .title
+                .icon-back
+                    a(href="#")
+                        i.material-icons keyboard_backspace
+                .title-left
+                    h6 Crear Mensaje
+        .createMsg
+            .msgCards
+                form.formMsgCreate.form-create-task
+                    .form-group
+                        label Grado
+                        select.msgCreateSlc
+                            option Grados
+                            - for(var i = 0; i < 6; i++)
+                                option Grado #{i}
+                        span.bubble-input
+                            i.material-icons grade
+                        
+                    .form-group
+                        label Alumno
+                        select.msgCreateSlc
+                            option Alumnos
+                            - for(var i = 0; i < 6; i++)
+                                option Alumno #{i}
+                        span.bubble-input
+                            i.material-icons group
+
+                    .form-group
+                        label Asunto
+                        input(type="text", required)
+                        span.bubble-input
+                            i.material-icons title
+                    
+                    .form-group
+                        label Mensaje:
+                        textarea(name="s", cols="30", rows="10",required)
+                        span.bubble-input
+                            i.material-icons.md-16 notes
+
+                    .btn-create
+                        button.create-task Enviar Mensaje
+        
+        include includes/navmenu.pug

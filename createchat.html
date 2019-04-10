@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Inicio</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="title">
+        <div class="icon-back"><a href="#"><i class="material-icons">keyboard_backspace</i></a></div>
+        <div class="title-left">
+          <h6>Crear Mensaje</h6>
+        </div>
+      </div>
+    </header>
+    <div class="createMsg">
+      <div class="msgCards">
+        <form class="formMsgCreate form-create-task">
+          <div class="form-group">
+            <label>Grado</label>
+            <select class="msgCreateSlc">
+              <option>Grados</option>
+              <option>Grado 0</option>
+              <option>Grado 1</option>
+              <option>Grado 2</option>
+              <option>Grado 3</option>
+              <option>Grado 4</option>
+              <option>Grado 5</option>
+            </select><span class="bubble-input"><i class="material-icons">grade</i></span>
+          </div>
+          <div class="form-group">
+            <label>Alumno</label>
+            <select class="msgCreateSlc">
+              <option>Alumnos</option>
+              <option>Alumno 0</option>
+              <option>Alumno 1</option>
+              <option>Alumno 2</option>
+              <option>Alumno 3</option>
+              <option>Alumno 4</option>
+              <option>Alumno 5</option>
+            </select><span class="bubble-input"><i class="material-icons">group</i></span>
+          </div>
+          <div class="form-group">
+            <label>Asunto</label>
+            <input type="text" required="required"/><span class="bubble-input"><i class="material-icons">title</i></span>
+          </div>
+          <div class="form-group">
+            <label>Mensaje:</label>
+            <textarea name="s" cols="30" rows="10" required="required"></textarea><span class="bubble-input"><i class="material-icons md-16">notes</i></span>
+          </div>
+          <div class="btn-create">
+            <button class="create-task">Enviar Mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <nav class="navmenu">
+      <ul class="menu">
+        <li class="menu-item"><a href="courses.html"><i class="material-icons">book</i>Cursos</a></li>
+        <li class="menu-item"><a href="home.html"><i class="material-icons">home</i>Inicio</a></li>
+        <li class="menu-item active"><a href="#"><i class="material-icons">exit_to_app</i>Salir</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

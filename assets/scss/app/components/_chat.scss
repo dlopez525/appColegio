@@ -1,0 +1,83 @@
+.createMsg {
+    @include edContainer();
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 4.5em;
+}
+
+.msgCards {
+    @include edItem(100,100,100);
+    @include card();
+}
+
+.msgCreateSlc {
+    height: 3em;
+    line-height: 2.5; 
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    border: 2px solid #112C4B;
+    margin-top: .5em;
+    outline: none;
+    padding-left: 40px;
+    padding-right: $gutter;
+    transition: .3s all;
+
+    &:focus {
+        border: 2px solid $blue-alt;
+    }
+}
+
+.mainlc {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.lists {
+    @include edContainer;
+    @include card();
+
+    margin-top: $gutter;
+    // height: 55px;
+    // max-height: 55px;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.list-img {
+    @include edItem(20,20,20);
+
+    // height: 28px;
+    // max-height: 28px;
+
+    &-img {
+        width: 50px;
+        height: 50px;
+        background: $gray-material;
+        border-radius:  50%;
+        color: #fff;
+        text-align: center;
+
+        i {
+            line-height: 50px;
+            font-size: 30px
+        }
+    }
+}
+
+.list-name {
+    @include edItem(80,80,80);
+
+    height: 50px;
+    max-height: 50px;
+
+    .name {
+
+        h6 {
+            margin-top: 0;
+            line-height: 50px;
+        }
+    }
+}

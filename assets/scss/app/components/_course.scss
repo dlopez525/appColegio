@@ -129,6 +129,10 @@
                 margin: 0;
             }
         }
+
+        &-img {
+            @include edItem(30,30,30);
+        }
     }
 }
 
